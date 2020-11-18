@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单学习</title>
+</head>
+<body>
+
+<h1>注册</h1>
+
+<!--表单form
+action:提交的位置，网站、请求处理地址
+method: 提交方式，
+        post：安全，可以传输大文件
+        get：可以在url中看到，不安全
+
+-->
+
+<form action="7、媒体元素.html" method="get">
+    <!--  表单框快捷方式： p + tab  -->
+            <!--  框内属性快捷方式：input + tab
+            type：制定元素类型:
+            -->
+
+            <!--  文本输入类型：input type="text"  -->
+                                     <!-- value:元素初始值，type是radio时必须制定一个值 -->
+                                                            <!-- maxlength:输入的最大字符数 -->
+                                                            <!-- size：初始宽度，单位：用密是字符，其他是像素 -->
+    <p>名字：<input type="text" name="username" value="值得信" maxlength="8" size="30"></p>
+            <!--  密码框类型：input type="password"  -->
+                                <!-- 表单元素的名称：name -->
+    <p>密码：<input type="password" name="pwd"></p>
+    
+
+
+            <!--  radio：单选中唯一选项的设置方法，通过name来统一组 -->
+    <p>
+        <input type="radio" value="boy" name="sex">男
+        <input type="radio" value="girl" name="sex">女
+    </p>
+
+            <!--  checkbox：
+            同样关注组的问题
+            checked:默认选中值
+              -->
+    <p>
+        <input type="checkbox" value="read" name="hobby">看书
+        <input type="checkbox" value="sports" name="hobby" checked>运动
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="eat" name="hobby">美食
+        <input type="checkbox" value="code" name="hobby">编程
+
+    </p>
+
+    <p>
+        <input type="image" src="../resoures/image/cn.png">
+    </p>
+    <hr>
+
+            <!-- 文件域快捷方式:file + tab -->
+            <!-- 按钮域快捷方式:button + tab -->
+    <p>
+        <input type="file" name="files">
+        <input type="button" name="upload" value="上传" >
+    </p>
+    
+    <p>
+             <!--  邮件验证  -->邮箱：
+        <input type="email" name="email">
+    </p>
+
+    <p>
+             <!--  URL  -->URL：
+        <input type="url" name="url">
+    </p>
+
+    <p>
+             <!--  数字  -->商品数量：
+        <input type="number" name="num" max="100" min="0" step="1">
+    </p>
+
+    <p>
+                <!--  滑块  -->音量：
+        <input type="range" name="volume" min="0" max="100" step="2">
+    </p>
+
+    <p>
+             <!--  搜索  -->搜索：
+    <input type="search" name="search">
+    </p>
+
+    <hr>
+
+    <!-- 下拉表单框快捷方式：select + tab
+            表单表单快捷方式：option + tab
+                    selected：默认选中值
+    -->
+    <p>应聘岗位
+        <select name="jobs" id="">
+            <option value="marketing">市场</option>
+            <option value="sales">销售</option>
+            <option value="project" selected>实施</option>
+            <option value="hr">人力</option>
+            <option value="financial">财务</option>
+        </select>
+    </p>
+
+
+
+        <!-- 文本域快捷方式：textarea + tab
+         cols：列数
+         rows：行数
+         -->
+    <p>
+        <textarea name="textarea" cols="50" rows="10" id="mark">个人补充</textarea>
+    </p>
+
+    <p>
+
+        <input type="submit" value="提交">
+        <input type="reset" value="清空表单">
+    </p>
+
+    <!--  隐藏域：hidden  -->
+    <!--  禁用域：disabled  -->
+    <!--  只读域：readonly  -->
+
+
+    <!--  增强鼠标可用性：label  -->
+    for:指向制定的位置高亮--> 在id中找对应的
+    <p>
+        <label for="mark">有什么说的，进来写点？</label>
+    </p>
+
+    <!--  表单验证
+    placeholder：提示信息
+    required:非空判断
+    pattern:正则表达式(上网搜索)
+      -->
+    <p>姓名：
+        <input type="text" placeholder="请输入姓名" >
+    </p>
+    <p>密码：
+<!--        <input type="password" placeholder="请输入密码" required>-->
+    </p>
+    <p>邮箱：
+        <input type="email" placeholder="请输入邮箱" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
+    </p>
+
+</form>
+
+</body>
+</html>

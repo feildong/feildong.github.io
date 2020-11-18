@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe内联框架学习</title>
+</head>
+<body>
+
+<!--快捷方式：iframe + tab
+src：引用页面地址
+name：框架标识名
+-->
+
+<iframe frameborder="0" height="200px"
+       src="https://wisdex.cn" width="200px"></iframe>
+
+<!--跳转到内联框架显示
+1、先设置内联框架，并设置标签:name
+2、链接跳转到标签
+-->
+<iframe src="" frameborder="0" name="hello"></iframe>
+<a href="https://wisdex.cn" target="hello"
+   height="200px" width="200px">点击跳转</a>
+
+</body>
+</html>
